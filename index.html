@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Earth Tag VR — Terms</title>
+  <meta name="description" content="Earth Tag VR Terms / Privacy Policy" />
+
+  <style>
+    :root{
+      --bg: #07080b;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.04);
+      --border: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --muted2: rgba(255,255,255,.55);
+      --accent: #8b5cf6;
+      --accent2: #22d3ee;
+      --shadow: 0 20px 60px rgba(0,0,0,.55);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 800px at 20% 10%, rgba(139,92,246,.22), transparent 55%),
+                  radial-gradient(900px 700px at 85% 25%, rgba(34,211,238,.16), transparent 55%),
+                  radial-gradient(900px 700px at 50% 100%, rgba(255,255,255,.06), transparent 60%),
+                  var(--bg);
+      line-height: 1.6;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+
+    .wrap{
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 16px;
+    }
+
+    .card{
+      width: min(980px, 100%);
+      background: linear-gradient(180deg, var(--panel), var(--panel2));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset: -2px;
+      background: linear-gradient(120deg, rgba(139,92,246,.40), rgba(34,211,238,.28), rgba(255,255,255,.06));
+      filter: blur(22px);
+      opacity: .35;
+      pointer-events: none;
+    }
+
+    .inner{
+      position: relative;
+      padding: 28px;
+      backdrop-filter: blur(10px);
+    }
+
+    header{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 18px;
+      align-items: baseline;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 18px;
+    }
+
+    .brand{
+      display:flex;
+      gap: 12px;
+      align-items:center;
+    }
+
+    .logo{
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.25), transparent 45%),
+        linear-gradient(135deg, rgba(139,92,246,.85), rgba(34,211,238,.75));
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    h1{
+      font-size: 18px;
+      margin: 0;
+      letter-spacing: .2px;
+      font-weight: 700;
+    }
+
+    .meta{
+      font-size: 13px;
+      color: var(--muted);
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      padding: 6px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    main{
+      padding-top: 4px;
+    }
+
+    .doc-title{
+      font-size: 22px;
+      margin: 0 0 8px 0;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    .doc-sub{
+      margin: 0 0 18px 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .section{
+      padding: 16px 0;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .section:first-of-type{ border-top: none; padding-top: 6px; }
+
+    .section h2{
+      margin: 0 0 8px 0;
+      font-size: 15px;
+      letter-spacing: .2px;
+      font-weight: 750;
+    }
+
+    .section p{
+      margin: 0;
+      color: rgba(255,255,255,.84);
+      font-size: 14px;
+    }
+
+    ul{
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: rgba(255,255,255,.84);
+      font-size: 14px;
+    }
+    li{ margin: 6px 0; }
+
+    footer{
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      display:flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--muted2);
+      font-size: 12px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.22);
+      text-decoration: none;
+    }
+
+    .dot{
+      width: 10px; height: 10px; border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(139,92,246,.12);
+    }
+
+    @media (max-width: 560px){
+      .inner{ padding: 20px; }
+      .meta{ justify-content: flex-start; }
+      .doc-title{ font-size: 20px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <article class="card" role="document" aria-label="Earth Tag VR Terms / Privacy Policy">
+      <div class="inner">
+        <header>
+          <div class="brand">
+            <div class="logo" aria-hidden="true"></div>
+            <div>
+              <h1>Earth Tag VR</h1>
+              <div class="doc-sub" style="margin:0;color:var(--muted2)">Legal / Terms</div>
+            </div>
+          </div>
+
+          <div class="meta">
+            <span class="pill">Development Team: ThatoneLem</span>
+            <span class="pill">Last Updated: January 2026</span>
+          </div>
+        </header>
+
+        <main>
+          <h2 class="doc-title">Privacy Policy</h2>
+          <p class="doc-sub">
+            This policy explains what data Earth Tag VR processes, why it’s needed for gameplay, and how you can contact us with questions.
+          </p>
+
+          <section class="section" id="introduction">
+            <h2>1. Introduction</h2>
+            <p>
+              Earth Tag VR ("the Game", "we", "our", "us") is developed and maintained by ThatoneLem.
+              We are committed to protecting the privacy of our users and handling personal data responsibly.
+              This Privacy Policy outlines what information we process, how it is used, and the rights available to users of Earth Tag VR.
+            </p>
+          </section>
+
+          <section class="section" id="information-we-collect">
+            <h2>2. Information We Collect</h2>
+            <p>
+              We collect only the minimum information required for the core functionality of the game. The types of information processed include:
+            </p>
+            <ul>
+              <li><strong>Username:</strong> Used to identify players during gameplay and multiplayer. Usernames are provided through the Meta platform services for in-game identification.</li>
+              <li><strong>IPv4 Address:</strong> Used for matchmaking and stable multiplayer connectivity. IP addresses are not used for tracking, analytics, or advertising purposes.</li>
+              <li><strong>Microphone Audio (Voice Chat):</strong> Enables real-time voice communication between players. Voice data is transmitted live and is not recorded or reviewed.</li>
+            </ul>
+          </section>
+
+          <section class="section" id="third-party-services">
+            <h2>3. Third-Party Services</h2>
+            <p>
+              Earth Tag VR relies on third-party services to deliver multiplayer and networking functionality.
+              These services may process limited data as necessary to perform their functions. Services used include:
+            </p>
+            <ul>
+              <li>Epic Games multiplayer services</li>
+              <li>Mirror Networking</li>
+              <li>PlayFab</li>
+            </ul>
+            <p style="margin-top:10px;color:var(--muted)">
+              Each third-party service operates under its own privacy policies and data handling practices.
+            </p>
+          </section>
+
+          <section class="section" id="use-of-information">
+            <h2>4. Use of Information</h2>
+            <p>The information processed is used solely for:</p>
+            <ul>
+              <li>Establishing and maintaining multiplayer connections</li>
+              <li>Displaying player usernames within the game</li>
+              <li>Enabling real-time voice communication between players</li>
+            </ul>
+          </section>
+
+          <section class="section" id="data-we-do-not-collect">
+            <h2>5. Data We Do Not Collect</h2>
+            <p>Earth Tag VR does not collect or process:</p>
+            <ul>
+              <li>Email addresses</li>
+              <li>Passwords or authentication credentials</li>
+              <li>Real names or personal identification details</li>
+              <li>Payment or billing information</li>
+              <li>Precise location data</li>
+              <li>Recorded voice data</li>
+            </ul>
+          </section>
+
+          <section class="section" id="data-retention">
+            <h2>6. Data Retention</h2>
+            <p>
+              Personal data is not retained beyond what is necessary for gameplay.
+              Network-related data, such as IP addresses, is used for connection purposes during gameplay sessions and is not permanently stored by Earth Tag VR.
+              Voice chat audio is transmitted in real time and is not stored.
+            </p>
+          </section>
+
+          <section class="section" id="childrens-privacy">
+            <h2>7. Children’s Privacy</h2>
+            <p>
+              Earth Tag VR does not knowingly collect personal data beyond what is required for basic gameplay functionality.
+              Access to the game is governed by platform-specific age requirements and parental controls provided by Meta and other platform providers.
+            </p>
+          </section>
+
+          <section class="section" id="your-rights">
+            <h2>8. Your Rights</h2>
+            <p>
+              You may stop all data processing by discontinuing use of the game.
+              If you have questions, concerns, or requests regarding this Privacy Policy, you may contact the development team using the details below.
+            </p>
+          </section>
+
+          <section class="section" id="contact">
+            <h2>9. Contact Information</h2>
+            <p>
+              For privacy-related inquiries, please contact the Earth Tag VR development team via our official Discord server:
+              <a href="https://discord.gg/earth-tag-1274133275421704326" target="_blank" rel="noopener noreferrer">
+                discord.gg/earth-tag-1274133275421704326
+              </a>
+            </p>
+          </section>
+        </main>
+
+        <footer>
+          <div>© <span id="y"></span> ThatoneLem — Earth Tag VR</div>
+          <a class="btn" href="https://discord.gg/earth-tag-1274133275421704326" target="_blank" rel="noopener noreferrer">
+            <span class="dot" aria-hidden="true"></span>
+            Contact on Discord
+          </a>
+        </footer>
+      </div>
+    </article>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
